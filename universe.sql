@@ -51,7 +51,8 @@ CREATE TABLE public.blackhole (
     blackhole_id integer NOT NULL,
     gravity integer,
     galaxy_id integer,
-    wormhole boolean DEFAULT false NOT NULL
+    wormhole boolean DEFAULT false NOT NULL,
+    name character varying(255)
 );
 
 
@@ -266,9 +267,9 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: blackhole; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.blackhole VALUES (1, 10000, 1, false);
-INSERT INTO public.blackhole VALUES (2, 20000, 2, false);
-INSERT INTO public.blackhole VALUES (3, 30000, 3, false);
+INSERT INTO public.blackhole VALUES (1, 10000, 1, false, NULL);
+INSERT INTO public.blackhole VALUES (2, 20000, 2, false, NULL);
+INSERT INTO public.blackhole VALUES (3, 30000, 3, false, NULL);
 
 
 --
